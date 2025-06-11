@@ -1,0 +1,60 @@
+### GET request to example server
+GET http://localhost:8080
+
+###
+GET http://localhost:8080/users
+
+###
+
+POST http://localhost:8080/users
+Content-Type: application/json
+
+{
+  "name": "bor3ii",
+  "email": "bor3i@example.com"
+}
+
+###
+GET http://localhost:8080/users/2
+###
+GET http://localhost:8080/users/username/bor3i
+###
+PUT http://localhost:8080/users/1
+Content-Type: application/json
+
+{
+  "name": "Doe",
+  "email": "johnny.doe@example.com"
+}
+###
+POST http://localhost:8080/categories/save
+Content-Type: application/json
+
+{
+  "name": "transport",
+  "userId": 2
+}
+###
+GET http://localhost:8080/categories
+
+###
+GET http://localhost:8080/categories/1
+###
+GET http://localhost:8080/categories/user/2
+
+###
+POST http://localhost:8080/Expense/save
+Content-Type: application/json
+
+{
+  "description": "Parking",
+  "amount": 5.00,
+  "date": "2025-06-11T20:00:00Z",
+  "category": {
+    "id": 2
+  }
+}
+
+###
+GET http://localhost:8080/Expense
+

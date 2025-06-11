@@ -1,0 +1,23 @@
+services:
+  db:
+    container_name: postgres2
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: chouket370
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: expense_tracker
+      PGDATA: /data/postgres
+    volumes:
+      - db:/data/postgres
+    ports:
+      - "5334:5432"
+    networks:
+      - db
+    restart: unless-stopped
+
+networks:
+  db:
+    driver: bridge
+
+volumes:
+  db:
